@@ -1,7 +1,7 @@
 import React from "react";
 // 3rd Party Components
 import Draggable from "react-draggable";
-import Terminal from "terminal-in-react";
+import Terminal from "react-console-emulator";
 // Styles
 import "../Styles/Home/Main.css";
 
@@ -14,17 +14,39 @@ export default class Main extends React.Component {
     }
 
     onStart = () => {
-        this.setState({activeDrags: ++this.state.activeDrags})
+        let change = this.state.activeDrags
+        this.setState({activeDrags: ++change})
     }
 
     onStop = () => {
-        this.setState({activeDrags: --this.state.activeDrags})
+        let change = this.state.activeDrags
+        this.setState({activeDrags: --change})
     }
 
     render() {
         const dragHandlers = {onStart: this.onStart, onStop: this.onStop}
+        const commands = {
+            echo: {
+                description: "Pass as string",
+                usage: "echo <string>",
+                fn: function () {
+                    return `${Array.from(arguments).join(` `)}`
+                }
+            },
+            goto: {
+                description: "Navigate to a page",
+                usage: "echo <string>",
+                fn: function () {
+                    return `${Array.from(arguments).join(` `)}`
+                }
+            }
+        }
+
         return(
             <div className={"main-container"}>
+                <div className={"skip-button-container"}>
+                    <button>Skip the intro page -></button>
+                </div>
                 <Draggable
                     handle={".handle"}
                     {...dragHandlers}
@@ -32,20 +54,13 @@ export default class Main extends React.Component {
                     defaultPosition={{x: 1000, y:350}}
                     grid={[5, 5]}
                     scale={1}
-                    style={{height: "20%", width: "30%"}}
                 >
-                    <div className={"handle"} style={{width: "22%", height: "auto"}}>
+                    <div className={"handle"} style={{width: "initial", maxWidth: "25%"}}>
                         <Terminal
-                            color={"green"}
-                            backgroundColor={"black"}
-                            barColor={"black"}
-                            allowTabs={false}
-                            msg={"Enter a command to get started"}
-                            style={{
-                                fontSize: "2em",
-                                width: "inherit",
-                                height: "inherit"
-                            }}
+                            autoFocus
+                            commands={commands}
+                            welcomeMessage={"Maximilian Orozco"}
+                            backgroundSize={"inherit"}
                         />
                     </div>
                 </Draggable>

@@ -8,11 +8,11 @@
     "@testing-library/user-event": "^7.1.2",
     "history": "^5.0.0",
     "react": "^16.13.1",
+    "react-console-emulator": "^5.0.0",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "terminal-in-react": "^4.3.1"
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
