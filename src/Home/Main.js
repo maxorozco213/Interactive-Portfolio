@@ -1,9 +1,11 @@
 import React from "react";
 // 3rd Party Components
 import Draggable from "react-draggable";
-import Terminal from "react-console-emulator";
+// Custom Components
+import SkipButton from "../Components/Main/SkipButton";
 // Styles
 import "../Styles/Home/Main.css";
+import AnimatedTerminal from "../Components/Main/AnimatedTerminal";
 
 export default class Main extends React.Component {
     constructor(props) {
@@ -35,33 +37,38 @@ export default class Main extends React.Component {
             },
             goto: {
                 description: "Navigate to a page",
-                usage: "echo <string>",
+                usage: "echo <experience, education, projects>",
                 fn: function () {
-                    return `${Array.from(arguments).join(` `)}`
+                    return `Navigate to ${Array.from(arguments)}`
                 }
             }
         }
 
+        /*
+            Have the user type in a few command to show contact information and social media links
+            Allow skip button to skip the terminal window
+        */
+
         return(
             <div className={"main-container"}>
-                <div className={"skip-button-container"}>
-                    <button>Skip the intro page -></button>
+                <SkipButton />
+                <div className={"info-container"}>
+                    <h1 className={"main-text"}>Maximilian H. Orozco</h1>
+                    <h2 className={"main-text"}>Software Engineer</h2>
+                    <h3 className={"link-text"}>GitHub</h3>
+                    <a href={"https://www.linkedin.com/in/maximilian-h-orozco/"} target={"_blank"} rel={"noopener noreferrer"}>
+                        <h3 className={"link-text"}>LinkedIn</h3>
+                    </a>
                 </div>
                 <Draggable
                     handle={".handle"}
                     {...dragHandlers}
                     axis={"both"}
-                    defaultPosition={{x: 1000, y:350}}
-                    grid={[5, 5]}
-                    scale={1}
+                    defaultPosition={{x: 910, y: 150}}
+                    grid={[30, 25]}
                 >
-                    <div className={"handle"} style={{width: "initial", maxWidth: "25%"}}>
-                        <Terminal
-                            autoFocus
-                            commands={commands}
-                            welcomeMessage={"Maximilian Orozco"}
-                            backgroundSize={"inherit"}
-                        />
+                    <div className={"handle"} style={{width: "initial", maxWidth: "30%", height: "500px"}}>
+                        <AnimatedTerminal commands={commands} />
                     </div>
                 </Draggable>
             </div>

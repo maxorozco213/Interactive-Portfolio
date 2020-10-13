@@ -9,11 +9,11 @@ import * as serviceWorker from './serviceWorker';
 const history = createBrowserHistory();
 
 ReactDOM.render(
-    <React.StrictMode>
+    <React.Fragment>
         <Router history={history}>
             <App />
         </Router>
-    </React.StrictMode>,
+    </React.Fragment>,
     document.querySelector('#root')
 );
 
