@@ -27,6 +27,8 @@ body {
     width: fit-content;
     padding: 10px;
     elevation: 0;
+    background-image: linear-gradient(to top right, #7A3458, #0D0B20);
+    border: solid darkgray 1px;
 }
 
 .skip-button-wrapper {
@@ -40,14 +42,28 @@ body {
     cursor: pointer;
 }
 
+.skip-button:active {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 .skip-button-font {
+    color: white;
     font-size: 1rem;
     font-weight: normal;
     white-space: nowrap;
 }
 
+.terminal-container {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
 .terminal-window {
-    height: auto
+    height: auto;
+    width: 750px;
 }
 
 .profile-image {

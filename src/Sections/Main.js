@@ -55,22 +55,25 @@ export default class Main extends React.Component {
                 <div className={"info-container"}>
                     <h1 className={"main-text"}>Maximilian H. Orozco</h1>
                     <h2 className={"main-text"}>Software Engineer</h2>
-                    <h3 className={"link-text"}>GitHub</h3>
+                    <a href={"https://github.com/maxorozco213"} target={"_blank"} rel={"noopener noreferrer"}>
+                        <h3 className={"link-text"}>GitHub</h3>
+                    </a>
                     <a href={"https://www.linkedin.com/in/maximilian-h-orozco/"} target={"_blank"} rel={"noopener noreferrer"}>
                         <h3 className={"link-text"}>LinkedIn</h3>
                     </a>
                 </div>
-                <Draggable
-                    handle={".handle"}
-                    {...dragHandlers}
-                    axis={"both"}
-                    defaultPosition={{x: 910, y: 150}}
-                    grid={[30, 25]}
-                >
-                    <div className={"handle"} style={{width: "initial", maxWidth: "30%", height: "500px"}}>
-                        <AnimatedTerminal commands={commands} />
-                    </div>
-                </Draggable>
+                <div className={"terminal-container"}>
+                    <Draggable
+                        handle={".handle"}
+                        {...dragHandlers}
+                        axis={"both"}
+                        grid={[30, 25]}
+                    >
+                        <div className={"handle"} style={{height: "500px"}}>
+                            <AnimatedTerminal commands={commands} />
+                        </div>
+                    </Draggable>
+                </div>
             </div>
         )
     }

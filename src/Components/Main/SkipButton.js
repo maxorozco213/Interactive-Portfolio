@@ -24,7 +24,7 @@ const SkipButton = () => {
         >
             <Button
                 className={"skip-button"}
-                onClick={console.log("Go to homepage")}
+                onClick={() => console.log("Go to homepage")}
             >
                 <span className={"skip-button-font"}>Skip the terminal</span>
             </Button>
