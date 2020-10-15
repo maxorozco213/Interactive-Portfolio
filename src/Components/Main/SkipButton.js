@@ -14,7 +14,8 @@ const SkipButton = () => {
             marginTop: "-500px",
             opacity: 0,
         },
-        delay: 1000
+        delay: 1000,
+        config: {mass: 1, tension: 280, friction: 60}
     });
 
     return (

@@ -8,15 +8,16 @@ const AnimatedTerminal = ({commands}) => {
         from: {
             opacity: 0
         },
-        delay: 1500
+        delay: 2000
     })
 
     return (
         <animated.div style={fadeIn}>
+            {/*<h4 className={"default-text"}>Try entering "help" below</h4>*/}
             <Terminal
                 autoFocus
                 commands={commands}
-                welcomeMessage={"Maximilian H. Orozco \n Portfolio and Resume, 2020"}
+                welcomeMessage={"Maximilian H. Orozco | Portfolio and Resume, 2020 \n Enter 'help' to get started"}
                 className={"terminal-window"}
             />
         </animated.div>
