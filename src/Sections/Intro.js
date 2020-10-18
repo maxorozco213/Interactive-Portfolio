@@ -2,10 +2,10 @@ import React from "react";
 // 3rd Party Components
 import Draggable from "react-draggable";
 // Custom Components
-import SkipButton from "../Components/Main/SkipButton";
+import SkipButton from "../Components/Intro/SkipButton";
 // Styles
-import "../Styles/Home/Main.css";
-import AnimatedTerminal from "../Components/Main/AnimatedTerminal";
+import "../Styles/Pages/Intro.css";
+import AnimatedTerminal from "../Components/Intro/AnimatedTerminal";
 import {Redirect} from "react-router-dom";
 
 export default class Intro extends React.Component {
@@ -41,7 +41,7 @@ export default class Intro extends React.Component {
                 usage: "echo <experience, education, projects>",
                 fn: function () {
                     if (arguments[0] === 'main')
-                    return <Redirect exact to={"/Main"} />
+                    return <Redirect exact to={"/Intro"} />
                 }
             },
             contact: {
@@ -72,7 +72,7 @@ export default class Intro extends React.Component {
         */
 
         return(
-            <div className={"main-container"}>
+            <div className={"intro-container"}>
                 <SkipButton />
                 <div className={"info-container"}>
                     <h1 className={"default-text"}>Maximilian H. Orozco</h1>
@@ -86,8 +86,6 @@ export default class Intro extends React.Component {
                             <span className={"link-text"}>LinkedIn</span>
                         </a>
                     </h2>
-
-
                 </div>
                 <div className={"terminal-container"}>
                     <Draggable

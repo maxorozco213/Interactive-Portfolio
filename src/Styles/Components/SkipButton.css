@@ -1,0 +1,40 @@
+.skip-button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.skip-button {
+    margin-right: 2%;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-self: end;
+    width: fit-content;
+    padding: 10px;
+    elevation: 0;
+    background-image: linear-gradient(to top right, #7A3458, #0D0B20);
+    border: solid darkgray 1px;
+}
+
+.skip-button-wrapper {
+    margin-right: -8%;
+    width: 30%;
+    background: none;
+    border: none;
+}
+
+.skip-button:hover {
+    cursor: pointer;
+}
+
+.skip-button:active {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.skip-button-font {
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    white-space: nowrap;
+}
