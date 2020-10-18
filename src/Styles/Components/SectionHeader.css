@@ -1,7 +1,12 @@
 .section-header-left {
     width: 100%;
+}
+
+.section-header-right {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-right: 2%;
 }
 
 .section-header-container {
@@ -10,15 +15,25 @@
     justify-content: flex-end;
 }
 
-.section-header {
+.title-container-left {
     display: flex;
     align-content: center;
-    width: 50%;
+    justify-content: flex-end;
+    width: 40%;
     height: 50px;
     border: solid black 1px;
+}
+
+.title-container-right {
+    display: flex;
+    align-content: center;
+    width: 40%;
+    height: 50px;
+    border: solid red 1px;
 }
 
 .section-title {
     align-self: center;
     margin-left: 2%;
+    margin-right: 2%;
 }
