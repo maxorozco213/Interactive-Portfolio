@@ -7,30 +7,41 @@ import Projects from "../Components/TextContent/Projects";
 // Styles
 import "../Styles/Components/SectionHeader.css";
 
-const Section = ({isLeftOrRight, title}) => {
+const Section = ({title, isLeftOrRight}) => {
     // Determine current section and return the matching component - Contains the text
     function getTextContent() {
-        if (title === "Education") {
-            return <Education />;
-        } else if (title === "Experience") {
-            return <Experience />;
-        } else if (title === "Projects") {
-            return <Projects />;
+        console.log(title, "Section.js line 13")
+        switch (title) {
+            case "Education":
+                return <Education />
+            case "Experience":
+                return <Experience />
+            case "Projects":
+                return <Projects />
+            default:
+                console.log("Error - Section.js Line 21")
         }
     }
 
     // Contains the image
     function imageContent() {
-        if (title === "Education") {
-            return "";
-        } else if (title === "Experience") {
-            return "";
-        } else if (title === "Projects") {
-            return "";
+        switch (title) {
+            case "Education":
+                return ""
+            case "Experience":
+                return ""
+            case "Projects":
+                return ""
+            default:
+                console.log("Error - Section.js Line 35")
         }
     }
 
-    // Determines what side the passed items will render on - Odd is left and even is right
+    /*
+        Determines what side the passed items will render on - Odd is left and even is right
+        Headers and images will be decided here
+        Text/Formatting is decided on the returned text sections
+    */
     if (isLeftOrRight % 2 === 0) {
         return (
             <div className={""}>
@@ -38,12 +49,7 @@ const Section = ({isLeftOrRight, title}) => {
                     title={title}
                     isRightSide={false}
                 />
-                <div id={"text-container"}>
-                    {getTextContent}
-                </div>
-                <div id={"image-container"}>
-                    {imageContent}
-                </div>
+                {getTextContent()}
             </div>
         );
     } else {
@@ -53,13 +59,7 @@ const Section = ({isLeftOrRight, title}) => {
                     title={title}
                     isRightSide={true}
                 />
-                <div id={"image-container"}>
-                    {imageContent}
-                </div>
-                <div id={"text-container"}>
-                    {getTextContent}
-                </div>
-
+                {getTextContent()}
             </div>
         );
     }

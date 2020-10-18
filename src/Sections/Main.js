@@ -6,16 +6,24 @@ import Section from "./Section";
 import "../Styles/Image.css";
 import "../Styles/Pages/Main.css";
 import profileImage from "../Images/profileImage.jpg";
-import Education from "../Components/TextContent/Education";
-import Experience from "../Components/TextContent/Experience";
-import Projects from "../Components/TextContent/Projects";
-
+// Variables
+let sectionsArray = ["Education", "Experience", "Projects"];
 
 export default class Main extends React.Component {
 
-
+    // Takes the titles from array defined above
+    // Passes to section component to get the correct content and display on alternating sides
+    // Even number is left side and odd number is right side
     showSections = () => {
-
+        return sectionsArray.map((section, index) => {
+            console.log(section, index)
+            return (
+                <Section
+                    title={section}
+                    isLeftOrRight={index}
+                />
+            );
+        });
     }
 
     render() {
@@ -38,12 +46,7 @@ export default class Main extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Education />
-                <Experience />
-                {/*<Projects />*/}
-                {/*
-                    TODO or just code the three sections separately? There are only 3 or 4
-                */}
+                {this.showSections()}
                 {/*
                     TODO ->
                         Need to call a function that loops and returns the sections
