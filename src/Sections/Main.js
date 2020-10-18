@@ -28,7 +28,13 @@ export default class Main extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                {/*
+                    TODO ->
+                        Need to call a function that passes
+                        Can use index from the map function to get the even/odd pattern
+                            i.e. .map(value, index)
+                        Using this means the isRightSide logic needs to be reversed so left is even
+                */}
             </div>
         );
     }

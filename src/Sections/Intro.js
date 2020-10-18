@@ -38,7 +38,7 @@ export default class Intro extends React.Component {
             },
             goto: {
                 description: "Navigate to a page",
-                usage: "echo <experience, education, projects>",
+                usage: "goto <experience, education, projects>",
                 fn: function () {
                     if (arguments[0] === 'main')
                     return <Redirect exact to={"/Intro"} />
@@ -75,16 +75,18 @@ export default class Intro extends React.Component {
             <div className={"intro-container"}>
                 <SkipButton />
                 <div className={"info-container"}>
-                    <h1 className={"default-text"}>Maximilian H. Orozco</h1>
-                    <h2 className={"default-text"}>
-                        Software Engineer <br /><br />
-                        <a href={"https://github.com/maxorozco213"} target={"_blank"} rel={"noopener noreferrer"}>
-                            <span className={"link-text"}>GitHub</span>
-                        </a>
-                        <span> | </span>
-                        <a href={"https://www.linkedin.com/in/maximilian-h-orozco/"} target={"_blank"} rel={"noopener noreferrer"}>
-                            <span className={"link-text"}>LinkedIn</span>
-                        </a>
+                    <h1 className={"default-text"}>Maximilian Hawk Orozco</h1>
+                    <h2 className={"intro-subheader"}>
+                        Software Engineer
+                        <div className={"intro-links"}>
+                            <a href={"https://github.com/maxorozco213"} target={"_blank"} rel={"noopener noreferrer"}>
+                                <span className={"link-text"}>GitHub</span>
+                            </a>
+                            <span>{"\xa0"}|{"\xa0"}</span>
+                            <a href={"https://www.linkedin.com/in/maximilian-h-orozco/"} target={"_blank"} rel={"noopener noreferrer"}>
+                                <span className={"link-text"}>LinkedIn</span>
+                            </a>
+                        </div>
                     </h2>
                 </div>
                 <div className={"terminal-container"}>

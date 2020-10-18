@@ -23,8 +23,6 @@
     width: 750px;
 }
 
-
-
 .default-text {
     color: white;
 }
@@ -33,4 +31,17 @@
     color: white;
     text-decoration: underline;
     font-size: smaller;
+}
+
+.intro-subheader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.intro-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px
 }

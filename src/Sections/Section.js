@@ -8,26 +8,29 @@ import Projects from "../Components/TextContent/Projects";
 import "../Styles/Components/SectionHeader.css";
 
 const Section = ({isLeftOrRight, title}) => {
+    // Determine current section and return the matching component - Contains the text
     function getTextContent() {
         if (title === "Education") {
-            return <Education />
+            return <Education />;
         } else if (title === "Experience") {
-            return <Experience />
+            return <Experience />;
         } else if (title === "Projects") {
-            return <Projects />
+            return <Projects />;
         }
     }
 
+    // Contains the image
     function imageContent() {
         if (title === "Education") {
-            return <Education />
+            return "";
         } else if (title === "Experience") {
-            return <Experience />
+            return "";
         } else if (title === "Projects") {
-            return <Projects />
+            return "";
         }
     }
 
+    // Determines what side the passed items will render on - Odd is left and even is right
     if (isLeftOrRight % 2 === 0) {
         return (
             <div className={""}>
