@@ -1,0 +1,24 @@
+.section-header-left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-header-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-header {
+    display: flex;
+    align-content: center;
+    width: 50%;
+    height: 50px;
+    border: solid black 1px;
+}
+
+.section-title {
+    align-self: center;
+    margin-left: 2%;
+}

@@ -1,0 +1,19 @@
+.image-container {
+    background-image: url("/src/Images/profileImage.jpg");
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.profile-image {
+    width: 14%;
+    border-radius: 50%;
+    border: 1px solid #777583;
+}
+
+.info-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
