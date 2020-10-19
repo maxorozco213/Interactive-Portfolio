@@ -24,7 +24,7 @@ const SkipButton = () => {
             style={props}
             className={"skip-button-container"}
         >
-            <Link exact to={"/Main"}>
+            <Link to={"/Main"}>
                 <button
                     className={"skip-button"}
                 >

@@ -1,5 +1,4 @@
 import React from "react";
-import SectionHeader from "../Main/SectionHeader";
 
 const Experience = () => {
     return (

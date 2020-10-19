@@ -1,6 +1,5 @@
 import React from "react";
 // Custom Components
-import SectionHeader from "../Main/SectionHeader";
 
 const Education = () => {
     return (

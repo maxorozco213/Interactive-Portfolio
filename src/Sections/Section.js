@@ -6,6 +6,9 @@ import Experience from "../Components/TextContent/Experience";
 import Projects from "../Components/TextContent/Projects";
 // Styles
 import "../Styles/Components/SectionHeader.css";
+import "../Styles/Pages/Section.css";
+// Images
+import education from "../Images/interface.png";
 
 const Section = ({title, isLeftOrRight}) => {
     // Determine current section and return the matching component - Contains the text
@@ -27,11 +30,35 @@ const Section = ({title, isLeftOrRight}) => {
     function imageContent() {
         switch (title) {
             case "Education":
-                return ""
+                return (
+                    <div className={"section-image-container"}>
+                        <img
+                            className={"section-image"}
+                            src={education}
+                            alt={"Education"}
+                        />
+                    </div>
+                );
             case "Experience":
-                return ""
+                return (
+                    <div className={"section-image-container"}>
+                        <img
+                            className={"section-image"}
+                            src={education}
+                            alt={"Education"}
+                        />
+                    </div>
+                );
             case "Projects":
-                return ""
+                return (
+                    <div className={"section-image-container"}>
+                        <img
+                            className={"section-image"}
+                            src={education}
+                            alt={"Education"}
+                        />
+                    </div>
+                );
             default:
                 console.log("Error - Section.js Line 35")
         }
@@ -42,24 +69,33 @@ const Section = ({title, isLeftOrRight}) => {
         Headers and images will be decided here
         Text/Formatting is decided on the returned text sections
     */
+
     if (isLeftOrRight % 2 === 0) {
         return (
-            <div className={""}>
+            // Left side
+            <div>
                 <SectionHeader
                     title={title}
                     isRightSide={false}
                 />
-                {getTextContent()}
+                <div className={"section-content"}>
+                    {getTextContent()}
+                    {imageContent()}
+                </div>
             </div>
         );
     } else {
+        // Right side
         return (
             <div>
                 <SectionHeader
                     title={title}
                     isRightSide={true}
                 />
-                {getTextContent()}
+                <div className={"section-content"}>
+                    {imageContent()}
+                    {getTextContent()}
+                </div>
             </div>
         );
     }

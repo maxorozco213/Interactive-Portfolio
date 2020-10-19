@@ -1,0 +1,22 @@
+.left-section {
+
+}
+
+.right-section {
+
+}
+
+.section-content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.section-image-container {
+    width: 50%;
+    height: 50%;
+}
+
+.section-image {
+    width: inherit;
+}
