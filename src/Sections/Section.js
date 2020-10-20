@@ -31,33 +31,24 @@ const Section = ({title, isLeftOrRight}) => {
         switch (title) {
             case "Education":
                 return (
-                    <div className={"section-image-container"}>
-                        <img
-                            className={"section-image"}
-                            src={education}
-                            alt={"Education"}
-                        />
-                    </div>
+                    <img
+                        src={education}
+                        alt={"Education"}
+                    />
                 );
             case "Experience":
                 return (
-                    <div className={"section-image-container"}>
-                        <img
-                            className={"section-image"}
-                            src={education}
-                            alt={"Education"}
-                        />
-                    </div>
+                    <img
+                        src={education}
+                        alt={"Education"}
+                    />
                 );
             case "Projects":
                 return (
-                    <div className={"section-image-container"}>
-                        <img
-                            className={"section-image"}
-                            src={education}
-                            alt={"Education"}
-                        />
-                    </div>
+                    <img
+                        src={education}
+                        alt={"Education"}
+                    />
                 );
             default:
                 console.log("Error - Section.js Line 35")
