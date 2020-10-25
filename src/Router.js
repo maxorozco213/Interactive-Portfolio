@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
-// Sections
+// SectionContents
 import Main from "./Sections/Main";
 import Intro from "./Sections/Intro";
 
