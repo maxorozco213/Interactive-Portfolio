@@ -9,6 +9,7 @@ import "../Styles/Components/SectionHeader.css";
 import "../Styles/Pages/Section.css";
 // Images
 import education from "../Images/interface.png";
+import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 
 const Section = ({title, isLeftOrRight}) => {
     // Determine current section and return the matching component - Contains the text
@@ -31,10 +32,11 @@ const Section = ({title, isLeftOrRight}) => {
         switch (title) {
             case "Education":
                 return (
-                    <img
-                        src={education}
-                        alt={"Education"}
-                    />
+                    <Parallax ref={ref => (this.parallax = ref)} pages={3}>
+                        <ParallaxLayer offset={0} speed={0.5}>
+                            <img src={education} alt={"Education"} />
+                        </ParallaxLayer>
+                    </Parallax>
                 );
             case "Experience":
                 return (
@@ -64,7 +66,7 @@ const Section = ({title, isLeftOrRight}) => {
     if (isLeftOrRight % 2 === 0) {
         return (
             // Left side
-            <div>
+            <div key={isLeftOrRight}>
                 <SectionHeader
                     title={title}
                     isRightSide={false}
@@ -78,7 +80,7 @@ const Section = ({title, isLeftOrRight}) => {
     } else {
         // Right side
         return (
-            <div>
+            <div key={isLeftOrRight}>
                 <SectionHeader
                     title={title}
                     isRightSide={true}

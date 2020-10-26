@@ -17,6 +17,7 @@ export default class Main extends React.Component {
     showSections = () => {
         return sectionsArray.map((section, index) => {
             console.log(section, index)
+            console.log(this.parallax);
             return (
                 <Section
                     title={section}

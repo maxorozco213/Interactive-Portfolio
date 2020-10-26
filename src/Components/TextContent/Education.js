@@ -3,14 +3,13 @@ import React from "react";
 
 const Education = () => {
     return (
-        <div>
-            <h1>California State University, Los Angeles</h1>
-            <h2>Graduated with B.S. in Computer Science</h2>
+        <div key={0}>
+            <h2>California State University, Los Angeles</h2>
+            <h3>Graduated with B.S. in Computer Science</h3>
             <br/>
-
             <h2>Glendale Community College</h2>
             <h3>B.S. in Computer Science</h3>
-
+            <br/>
             <h2>San Francisco State University</h2>
             <h3>B.S. in Computer Science</h3>
         </div>
