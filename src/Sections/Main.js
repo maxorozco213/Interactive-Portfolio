@@ -19,10 +19,12 @@ export default class Main extends React.Component {
             console.log(section, index)
             console.log(this.parallax);
             return (
-                <Section
-                    title={section}
-                    isLeftOrRight={index}
-                />
+                <div key={index}>
+                    <Section
+                        title={section}
+                        isLeftOrRight={index}
+                    />
+                </div>
             );
         });
     }

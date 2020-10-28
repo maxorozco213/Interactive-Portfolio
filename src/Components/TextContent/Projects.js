@@ -9,7 +9,7 @@ export default class Projects extends React.Component {
     }
 
     componentDidMount() {
-        this.getGitData();
+
     }
 
     getGitData = () => {

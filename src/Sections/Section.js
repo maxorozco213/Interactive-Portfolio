@@ -11,6 +11,24 @@ import "../Styles/Pages/Section.css";
 import education from "../Images/interface.png";
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 
+export function debounce(func, wait = 5, immediate = false) {
+    return function() {
+        let timeout;
+        const context = this;
+        const args = Array.from(arguments);
+        console.log("ARGSSSSS", args);
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    }
+}
+
 const Section = ({title, isLeftOrRight}) => {
     // Determine current section and return the matching component - Contains the text
     function getTextContent() {
@@ -32,11 +50,7 @@ const Section = ({title, isLeftOrRight}) => {
         switch (title) {
             case "Education":
                 return (
-                    <Parallax ref={ref => (this.parallax = ref)} pages={3}>
-                        <ParallaxLayer offset={0} speed={0.5}>
-                            <img src={education} alt={"Education"} />
-                        </ParallaxLayer>
-                    </Parallax>
+                    <img src={education} alt={"Education"} />
                 );
             case "Experience":
                 return (
