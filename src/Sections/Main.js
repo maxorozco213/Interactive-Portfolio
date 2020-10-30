@@ -6,6 +6,7 @@ import Section from "./Section";
 import "../Styles/Image.css";
 import "../Styles/Pages/Main.css";
 import profileImage from "../Images/profileImage.jpg";
+import {Parallax} from "react-spring/renderprops-addons";
 // Variables
 let sectionsArray = ["Education", "Experience", "Projects"];
 
@@ -16,8 +17,6 @@ export default class Main extends React.Component {
     // Even number is left side and odd number is right side
     showSections = () => {
         return sectionsArray.map((section, index) => {
-            console.log(section, index)
-            console.log(this.parallax);
             return (
                 <div key={index}>
                     <Section

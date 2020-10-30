@@ -4,7 +4,7 @@ import "../../Styles/SectionContents/Experience.css";
 
 const Experience = () => {
     return (
-        <div key={0} className={"exp-content"}>
+        <div key={0} className={"exp-text-container"}>
             <h2>Buelna News Blog</h2>
             <h3>Freelance Front-End Developer and Project Lead</h3>
             <br/>

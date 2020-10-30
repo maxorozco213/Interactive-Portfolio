@@ -61,7 +61,6 @@ export default class Intro extends React.Component {
                     } else {
                         return "Invalid command"
                     }
-
                 }
             }
         }
