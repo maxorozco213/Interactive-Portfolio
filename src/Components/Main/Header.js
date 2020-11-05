@@ -8,8 +8,7 @@ const Header = () => {
     return (
         <div className={"header-container"}>
             <div className={"section-links"}>
-                <button>Home</button>
-                <button>Education</button>
+                <a href={"#education"}><button>Education</button></a>
                 <button>Experience</button>
                 <button>Projects</button>
             </div>

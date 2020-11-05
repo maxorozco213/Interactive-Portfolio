@@ -5,7 +5,6 @@ import Education from "../Components/TextContent/Education";
 import Experience from "../Components/TextContent/Experience";
 import Projects from "../Components/TextContent/Projects";
 // 3rd party components
-import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 import {animated, useSpring} from "react-spring";
 // Styles
 import "../Styles/Components/SectionHeader.css";
@@ -16,6 +15,7 @@ import education from "../Images/interface.png";
 const calc = o => `translateY(${o * 0.04}px)`;
 
 const Section = ({title, isLeftOrRight}) => {
+    const sectionID = ["#education", "#experience", "#projects"];
     const ref = useRef();
     const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
 
@@ -106,9 +106,9 @@ const Section = ({title, isLeftOrRight}) => {
     */
 
     if (isLeftOrRight % 2 === 0) {
+        // Left side7
         return (
-            // Left side
-            <div key={isLeftOrRight} ref={ref}>
+            <div id={sectionID[isLeftOrRight]} ref={ref}>
                 <SectionHeader
                     title={title}
                     isRightSide={false}
@@ -122,7 +122,7 @@ const Section = ({title, isLeftOrRight}) => {
     } else {
         // Right side
         return (
-            <div key={isLeftOrRight} ref={ref}>
+            <div id={sectionID[isLeftOrRight]} ref={ref}>
                 <SectionHeader
                     title={title}
                     isRightSide={true}

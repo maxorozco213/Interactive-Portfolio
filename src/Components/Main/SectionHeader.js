@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 // 3rd Party components
-import {animated, useSpring, useTransition} from "react-spring";
+import {animated, useSpring} from "react-spring";
 // Styles
 import "../../Styles/Components/SectionHeader.css";
 

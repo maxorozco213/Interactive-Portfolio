@@ -1,9 +1,11 @@
 import React from "react";
 // Custom Components
+// Styles
+import "../../Styles/SectionContents/Education.css";
 
 const Education = () => {
     return (
-        <div key={0}>
+        <div className={"edu-text-container"}>
             <h2>California State University, Los Angeles</h2>
             <h3>Graduated with B.S. in Computer Science</h3>
             <br/>

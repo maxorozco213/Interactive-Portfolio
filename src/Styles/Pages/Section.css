@@ -28,13 +28,15 @@
 .section-image-right {
     width: 150%;
     margin-bottom: 5%;
-    margin-left: -50%
+    margin-top: 5%;
+    margin-left: -40%
 }
 
 .section-image-left {
     width: 150%;
+    margin-top: 5%;
     margin-bottom: 5%;
-    margin-right: -30%
+    margin-left: -10%
 }
 
 .section-image-window {

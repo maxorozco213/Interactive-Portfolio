@@ -6,7 +6,6 @@ import Section from "./Section";
 import "../Styles/Image.css";
 import "../Styles/Pages/Main.css";
 import profileImage from "../Images/profileImage.jpg";
-import {Parallax} from "react-spring/renderprops-addons";
 // Variables
 let sectionsArray = ["Education", "Experience", "Projects"];
 
