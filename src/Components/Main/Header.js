@@ -9,8 +9,8 @@ const Header = () => {
         <div className={"header-container"}>
             <div className={"section-links"}>
                 <a href={"#education"}><button>Education</button></a>
-                <button>Experience</button>
-                <button>Projects</button>
+                <a href={"#experience"}><button>Experience</button></a>
+                <a href={"#projects"}><button>Projects</button></a>
             </div>
             <div className={"resume-link"}>
                 <a href={pdf} target={"_blank"} rel={"noopener noreferrer"}>

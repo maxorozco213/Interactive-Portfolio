@@ -1,9 +1,10 @@
 .edu-text-container {
     width: 20%;
     height: 40%;
-    margin: 4% 10%;
+    padding-left: 5%;
+    margin-top: 8%;
 }
 
-.edu-content-container > h3 {
+.edu-text-container > h3 {
     margin: 0;
 }

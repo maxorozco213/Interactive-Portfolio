@@ -6,11 +6,14 @@
 
 }
 
+.section-container {
+    height: 70vh;
+}
+
 .section-content {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
 }
 
 .section-content * img {
@@ -21,20 +24,20 @@
     width: 20%;
     height: 40%;
     margin-right: 10%;
-    margin-left:  10%;
-    margin-bottom:  5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 
 .section-image-right {
     width: 150%;
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 20%;
     margin-left: -40%
 }
 
 .section-image-left {
     width: 150%;
-    margin-top: 5%;
+    margin-top: 18%;
     margin-bottom: 5%;
     margin-left: -10%
 }

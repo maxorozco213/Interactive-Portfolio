@@ -12,7 +12,7 @@ import "../Styles/Pages/Section.css";
 // Images
 import education from "../Images/interface.png";
 
-const calc = o => `translateY(${o * 0.04}px)`;
+const calc = o => `translateY(${o * 0.03}px)`;
 
 const Section = ({title, isLeftOrRight}) => {
     const sectionID = ["#education", "#experience", "#projects"];
@@ -87,11 +87,11 @@ const Section = ({title, isLeftOrRight}) => {
                             transform: offset.interpolate(calc)
                         }}
                     >
-                        <img
-                            className={"section-image-right"}
-                            src={education}
-                            alt={"Education"}
-                        />
+                        {/*<img*/}
+                        {/*    className={"section-image-right"}*/}
+                        {/*    src={education}*/}
+                        {/*    alt={"Education"}*/}
+                        {/*/>*/}
                     </animated.div>
                 );
             default:
@@ -108,7 +108,11 @@ const Section = ({title, isLeftOrRight}) => {
     if (isLeftOrRight % 2 === 0) {
         // Left side7
         return (
-            <div id={sectionID[isLeftOrRight]} ref={ref}>
+            <div
+                className={"section-container"}
+                id={sectionID[isLeftOrRight]}
+                ref={ref}
+            >
                 <SectionHeader
                     title={title}
                     isRightSide={false}
@@ -122,7 +126,11 @@ const Section = ({title, isLeftOrRight}) => {
     } else {
         // Right side
         return (
-            <div id={sectionID[isLeftOrRight]} ref={ref}>
+            <div
+                id={sectionID[isLeftOrRight]}
+                ref={ref}
+                className={"section-container"}
+            >
                 <SectionHeader
                     title={title}
                     isRightSide={true}
