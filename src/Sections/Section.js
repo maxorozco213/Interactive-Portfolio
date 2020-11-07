@@ -15,7 +15,6 @@ import education from "../Images/interface.png";
 const calc = o => `translateY(${o * 0.03}px)`;
 
 const Section = ({title, isLeftOrRight}) => {
-    const sectionID = ["#education", "#experience", "#projects"];
     const ref = useRef();
     const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
 
@@ -110,7 +109,6 @@ const Section = ({title, isLeftOrRight}) => {
         return (
             <div
                 className={"section-container"}
-                id={sectionID[isLeftOrRight]}
                 ref={ref}
             >
                 <SectionHeader
@@ -127,7 +125,6 @@ const Section = ({title, isLeftOrRight}) => {
         // Right side
         return (
             <div
-                id={sectionID[isLeftOrRight]}
                 ref={ref}
                 className={"section-container"}
             >

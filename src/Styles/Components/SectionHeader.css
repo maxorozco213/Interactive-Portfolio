@@ -20,6 +20,7 @@
     display: flex;
     align-content: center;
     justify-content: flex-end;
+    
     flex-direction: column;
     width: 40%;
     height: 50px;

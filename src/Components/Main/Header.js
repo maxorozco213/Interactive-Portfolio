@@ -8,9 +8,10 @@ const Header = () => {
     return (
         <div className={"header-container"}>
             <div className={"section-links"}>
-                <a href={"#education"}><button>Education</button></a>
-                <a href={"#experience"}><button>Experience</button></a>
-                <a href={"#projects"}><button>Projects</button></a>
+                <a href={"#education"}><button><h3>Education</h3></button></a>
+                <a href={"#experience"}><button><h3>Experience</h3></button></a>
+                <a href={"#projects"}><button><h3>Projects</h3></button></a>
+                <a href={"#senior-design"}><button><h3>Senior Design</h3></button></a>
             </div>
             <div className={"resume-link"}>
                 <a href={pdf} target={"_blank"} rel={"noopener noreferrer"}>
