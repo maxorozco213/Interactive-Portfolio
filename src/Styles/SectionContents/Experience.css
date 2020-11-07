@@ -1,0 +1,10 @@
+.exp-text-container {
+    width: 20%;
+    height: 40%;
+    margin-top: 5%;
+}
+
+
+.exp-text-container > h3 {
+    margin: 0;
+}

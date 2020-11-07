@@ -1,7 +1,7 @@
 .skip-button-container {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 97%;
 }
 
 .skip-button {
@@ -17,7 +17,6 @@
 }
 
 .skip-button-wrapper {
-    margin-right: -8%;
     width: 30%;
     background: none;
     border: none;

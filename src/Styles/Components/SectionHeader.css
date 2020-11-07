@@ -1,24 +1,51 @@
 .section-header-left {
     width: 100%;
+}
+
+.section-header-right {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-right: 2%;
 }
 
 .section-header-container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
-.section-header {
+.title-container-left {
     display: flex;
     align-content: center;
-    width: 50%;
+    justify-content: flex-end;
+    
+    flex-direction: column;
+    width: 40%;
     height: 50px;
-    border: solid black 1px;
 }
 
-.section-title {
-    align-self: center;
+.title-container-right {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 50px;
+}
+
+.section-title-left {
+    align-self: end;
     margin-left: 2%;
+    margin-right: 2%;
+}
+
+.section-title-right {
+    align-self: start;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.section-divider {
+    border-bottom: solid black 2px;
 }

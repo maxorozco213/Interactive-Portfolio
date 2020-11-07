@@ -1,62 +1,141 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 // Custom components
 import SectionHeader from "../Components/Main/SectionHeader";
 import Education from "../Components/TextContent/Education";
 import Experience from "../Components/TextContent/Experience";
 import Projects from "../Components/TextContent/Projects";
+// 3rd party components
+import {animated, useSpring} from "react-spring";
 // Styles
 import "../Styles/Components/SectionHeader.css";
+import "../Styles/Pages/Section.css";
+// Images
+import education from "../Images/interface.png";
 
-const Section = ({isLeftOrRight, title}) => {
+const calc = o => `translateY(${o * 0.03}px)`;
+
+const Section = ({title, isLeftOrRight}) => {
+    const ref = useRef();
+    const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
+
+    const handleScroll = () => {
+        const posY = ref.current.getBoundingClientRect().top;
+        const offset = window.pageYOffset - posY;
+        set({ offset });
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return() => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    })
+
+    // Determine current section and return the matching component - Contains the text
     function getTextContent() {
-        if (title === "Education") {
-            return <Education />
-        } else if (title === "Experience") {
-            return <Experience />
-        } else if (title === "Projects") {
-            return <Projects />
+        console.log(title, "Section.js line 13")
+        switch (title) {
+            case "Education":
+                return <Education />
+            case "Experience":
+                return <Experience />
+            case "Projects":
+                return <Projects />
+            default:
+                console.log("Error - Section.js Line 21")
         }
     }
 
+    // Contains the
+    // image
     function imageContent() {
-        if (title === "Education") {
-            return <Education />
-        } else if (title === "Experience") {
-            return <Experience />
-        } else if (title === "Projects") {
-            return <Projects />
+        switch (title) {
+            case "Education":
+                return (
+                    <animated.div
+                        style={{
+                            transform: offset.interpolate(calc)
+                        }}
+                    >
+                        <img
+                            className={"section-image-right"}
+                            src={education}
+                            alt={"Education"}
+                        />
+                    </animated.div>
+                );
+            case "Experience":
+                return (
+                    <animated.div
+                        style={{
+                            transform: offset.interpolate(calc)
+                        }}
+                    >
+                        <img
+                            className={"section-image-left"}
+                            src={education}
+                            alt={"Education"}
+                        />
+                    </animated.div>
+                );
+            case "Projects":
+                return (
+                    <animated.div
+                        style={{
+                            transform: offset.interpolate(calc)
+                        }}
+                    >
+                        {/*<img*/}
+                        {/*    className={"section-image-right"}*/}
+                        {/*    src={education}*/}
+                        {/*    alt={"Education"}*/}
+                        {/*/>*/}
+                    </animated.div>
+                );
+            default:
+                console.log("Error - Section.js Line 35")
         }
     }
+
+    /*
+        Determines what side the passed items will render on - Odd is left and even is right
+        Headers and images will be decided here
+        Text/Formatting is decided on the returned text sections
+    */
 
     if (isLeftOrRight % 2 === 0) {
+        // Left side7
         return (
-            <div className={""}>
+            <div
+                className={"section-container"}
+                ref={ref}
+            >
                 <SectionHeader
                     title={title}
                     isRightSide={false}
                 />
-                <div id={"text-container"}>
-                    {getTextContent}
-                </div>
-                <div id={"image-container"}>
-                    {imageContent}
+                <div className={"section-content"}>
+                    {getTextContent()}
+                    {imageContent()}
                 </div>
             </div>
         );
     } else {
+        // Right side
         return (
-            <div>
+            <div
+                ref={ref}
+                className={"section-container"}
+            >
                 <SectionHeader
                     title={title}
                     isRightSide={true}
                 />
-                <div id={"image-container"}>
-                    {imageContent}
+                <div className={"section-content"}>
+                    {imageContent()}
+                    {getTextContent()}
                 </div>
-                <div id={"text-container"}>
-                    {getTextContent}
-                </div>
-
             </div>
         );
     }

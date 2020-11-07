@@ -5,23 +5,39 @@
     justify-content: space-between;
     flex-direction: row;
     align-content: center;
+    elevation: higher;
 }
 
 .section-links {
     width: 30%;
     margin-left: 10px;
     display: flex;
+    align-content: center;
     justify-content: space-around;
 }
 
-.section-links > button {
+.section-links * button {
     background: none;
     border: none;
-    width: 90px;
+    width: 150px;
+    height: 100%;
+    align-content: center;
 }
 
-.section-links > button:hover {
+.section-links * span {
+    font-size: large;
+    color: black;
+}
+
+.section-links * button:hover {
     cursor: pointer;
+    background: azure;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.section-links * button:active {
+    elevation: 0;
 }
 
 .resume-link {
