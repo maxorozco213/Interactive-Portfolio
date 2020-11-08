@@ -1,0 +1,118 @@
+{
+    "schools": [
+        {
+            "id": 2,
+            "schoolName": "San Francisco State University",
+            "link": "https://www.sfsu.edu/",
+            "attendStart": "August 2014",
+            "attendEnd": "May 2016",
+            "major": "B.S. in Computer Science",
+            "extracurriculars": [
+                {
+                    "groupName": "Alpha Phi Omega, Mu Zeta Chapter",
+                    "participationStart": "August 2017",
+                    "participationEnd": "May 2020",
+                    "roles": [
+                        "Former elected Sargent-At-Arms",
+                        "Active member"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "schoolName": "Glendale Community College",
+            "link": "https://www.glendale.edu/",
+            "attendStart": "August 2016",
+            "attendEnd": "May 2017",
+            "major": "B.S. in Computer Science"
+        },
+        {
+            "id": 1,
+            "schoolName": "California State University, Los Angeles",
+            "link": "http://www.calstatela.edu/",
+            "attendStart": "August 2017",
+            "attendEnd": "May 2020 (Graduated)",
+            "major": "B.S. in Computer Science",
+            "extracurriculars": [
+                {
+                    "groupName": "Alpha Phi Omega, Lambda Mu Chapter",
+                    "participationStart": "August 2017",
+                    "participationEnd": "May 2020",
+                    "roles": [
+                        "Former elected Secretary",
+                        "Active member"
+                    ]
+                },
+                {
+                    "groupName": "Association of Computing and Machinery (ACM)",
+                    "participationStart": "August 2019",
+                    "participationEnd": "December 2019"
+                }
+            ]
+        }
+    ],
+    "skills": [
+        "Collaboration",
+        "Customer Service",
+        "Web development",
+        "User interface",
+        "User experience",
+        "Source Control",
+        "Git",
+        "GitHub",
+        "Agile Development",
+        "SCRUM",
+        "JavaScript",
+        "ReactJS",
+        "Redux",
+        "Python",
+        "Django",
+        "HTML",
+        "CSS",
+        "Kotlin",
+        "Java",
+        "Containerization",
+        "Docker",
+        "MySQL",
+        "AWS EC2",
+        "PowerShell",
+        "Angular",
+        "React Native",
+        "Vue",
+        "AdobeXD",
+        "Excel",
+        "API",
+        "JSON",
+        "TypeScript",
+        "Object Oriented Programming"
+    ],
+    "courses": [
+        "Operating Systems",
+        "Web and Internet Programming",
+        "Analysis of Algorithms",
+        "Java",
+        "Functional Programming",
+        "Networking Protocols and Programming",
+        "Cryptography and Information Security",
+        "Android Development",
+        "Discrete Math",
+        "Computer Organization (Electrical Engineering)",
+        "Physics",
+        "Software Engineering",
+        "Data Structures",
+        "Automata Theory",
+        "Principles of Database Systems",
+        "Programming Language Paradigms",
+        "Robotics"
+    ],
+    "internship": {
+        "abstract": "As more and more satellites are launched into orbit, it is important to track of the status of each one. We're developing ODAS, with guidance from our Boeing liaisons, to function as a central hub which focuses on monitoring the Health and Status of your satellites. ODAS does so by analyzing the Health and Status Telemetry for each of your satellites, and providing powerful analytical tools, via a user-friendly Web interface, that allows any user or organization to monitor the state of their satellites. From the beginning we designed ODAS to be an Easy-to-Use system that deals with all of the dirty work for you, ranging from Fault Detection using Machine Learning to scalable storage solutions to manage millions of Telemetry data points.",
+        "frontend": "ODAS is built with modern Frontend frameworks. We're using React JS to serve as the frontend that handles access and functionality provided by the backend. Since our application will require many of the React components access to the Backend API's response, our team is using state management using Redux methodologies.",
+        "backend": "For our Backend, we chose to use the Django web framework since it provides a lot of functionality to implement all of the features we need for ODAS. Our Backend serves as a REST API, which communicates and delivers the desired data and information to the Frontend. We also manage connecting and storing the telemetry data points, user / organization information, and files to the MySql database and file servers.",
+        "machine": "ODAS plans on delivering powerful Fault Detection capabilities. With the telemetry data provided by our Boeing liaisons, we're implementing various Machine Learning techniques to detect anomalous behavior based on the historical data for the provided component on the satellite. Since we're working with time-series data, our approaches include Sliding Window, with Classical ML algorithms and Recurrent Neural Networks, using Long-Short Term Networks.",
+        "container": "We've been developing ODAS from scratch, so our mindset is to construct the foundation for an application that, at some point, may be utilized in the Aerospace industry. Because of this, we're making sure that ODAS has the capability to scale if and when demand grows. By containerizing our Frontend, Backend, and Machine Learning applications, we're ensuring that we could launch multiple instances of either container; allowing us to properly scale based on demand.",
+        "aws": "In order to complement our containerized application, we're hosting many of our services on AWS. This allows us to provide all of ODAS for free, up until we meet a certain demand, when we can then start scaling by increasing our compute, storage, and database necessities. From AWS, we're using RDS to manage our MySql Database, EC2 for our compute resources which are used by the Docker containers, and S3 Buckets to manage file storage.",
+        "database": "ODAS provides a lot of functionality which includes User and Organization registration, Token Authentication to the Backend API endpoints, and User file uploads. Having a Relational Database made it simple to track Satellite, file, and data ownership and permissions."
+    }
+}
