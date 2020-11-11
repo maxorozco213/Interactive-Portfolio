@@ -9,7 +9,7 @@ import profileImage from "../Images/profileImage.jpg";
 // Variables
 let sectionsArray = ["Education", "Experience", "Projects", "Senior Design"];
 
-const sectionID = ["education", "experience", "projects"];
+const sectionID = ["education", "experience", "projects", "senior-design"];
 
 export default class Main extends React.Component {
     // Takes the titles from array defined above

@@ -40,8 +40,14 @@ export default class Intro extends React.Component {
                 description: "Navigate to a page",
                 usage: "goto <experience, education, projects>",
                 fn: function () {
-                    if (arguments[0] === 'main')
-                    return <Redirect exact to={"/Intro"} />
+                    console.log(arguments[0])
+                    if (arguments[0].toLowerCase() === 'experience' || arguments[0] === 'education' || arguments[0] === 'projects') {
+                        return <Redirect exact to={`/Main#${arguments[0]}`}/>
+                    } else if (arguments[0].toLowerCase() === 'main') {
+                        return <Redirect exact to={'/Main'} />
+                    } else {
+                        return "Try again"
+                    }
                 }
             },
             contact: {

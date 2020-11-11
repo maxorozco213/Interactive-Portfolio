@@ -9,7 +9,7 @@ const Experience = () => {
             <h3>Freelance Front-End Developer and Project Lead</h3>
             <br/>
             <h2>Boeing</h2>
-            <h3>Senior Design Internship</h3>
+            <h3>Senior Design Intern</h3>
             <br/>
             <h2>Alpha Phi Omega</h2>
             <h3>Volunteer React Native Developer</h3>

@@ -10,46 +10,47 @@ const Boeing = () => {
     return (
         <div className={"odas-container"}>
             <div className={"odas-title"}>
-                <h2>Operations Data Analysis & Management System</h2>
-                <h3 style={{fontStyle: "italic"}}>sponsored by Boeing</h3> <br/>
+                <h1>Operations Data Analysis & Management System</h1>
+                <h2 style={{fontStyle: "italic"}}>sponsored by Boeing</h2> <br/>
             </div>
             <div style={{marginTop: "1%"}}>
                 <h3>Abstract</h3>
-                <div>{dataVar.abstract}</div>
+                <Divider />
+                <span>{dataVar.abstract}</span>
             </div>
             <div>
                 <div className={"odas-top-row"}>
                     <div>
-                        <span>Front-end</span>
+                        <h3>Front-end</h3>
                         <Divider />
-                        {dataVar.frontend}
+                        <span>{dataVar.frontend}</span>
                     </div>
                     <div>
-                        <span>Backend</span>
+                        <h3>Backend</h3>
                         <Divider />
-                        {dataVar.backend}
+                        <span>{dataVar.backend}</span>
                     </div>
                     <div>
-                        <span>Machine Learning</span>
+                        <h3>Machine Learning</h3>
                         <Divider />
-                        {dataVar.machine}
+                        <span>{dataVar.machine}</span>
                     </div>
                 </div>
                 <div className={"odas-bot-row"}>
                     <div>
-                        <span>Containers</span>
+                        <h3>Docker Containers</h3>
                         <Divider />
-                        {dataVar.container}
+                        <span>{dataVar.container}</span>
                     </div>
                     <div>
-                        <span>Amazon Web Services</span>
+                        <h3>Amazon Web Services</h3>
                         <Divider />
-                        {dataVar.aws}
+                        <span>{dataVar.aws}</span>
                     </div>
                     <div>
-                        <span>Database</span>
+                        <h3>Database</h3>
                         <Divider />
-                        {dataVar.database}
+                        <span>{dataVar.database}</span>
                     </div>
                 </div>
             </div>

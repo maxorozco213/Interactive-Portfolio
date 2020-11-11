@@ -13,7 +13,7 @@ import "../Styles/Pages/Section.css";
 // Images
 import education from "../Images/interface.png";
 
-const calc = o => `translateY(${o * 0.03}px)`;
+const calc = o => `translateY(${o * 0.04}px)`;
 
 const Section = ({title, isLeftOrRight}) => {
     const ref = useRef();
@@ -86,7 +86,7 @@ const Section = ({title, isLeftOrRight}) => {
     */
 
     if (isLeftOrRight % 2 === 0) {
-        // Left side7
+        // Left side
         return (
             <div
                 ref={ref}
