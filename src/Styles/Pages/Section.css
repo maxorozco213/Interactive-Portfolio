@@ -1,30 +1,19 @@
-.left-section {
-
-}
-
-.right-section {
-
-}
-
 .section-container {
-    height: 70vh;
+    min-height: 70vh;
 }
 
 .section-content {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-}
-
-.section-content * img {
-
+    width: 100%;
 }
 
 .section-content > div {
     width: 20%;
-    height: 40%;
+    min-height: 40%;
     margin-right: 10%;
-    margin-left: 10%;
+    margin-left: 12%;
     margin-bottom: 5%;
 }
 
@@ -32,13 +21,13 @@
     width: 150%;
     margin-bottom: 5%;
     margin-top: 20%;
-    margin-left: -40%
+    margin-left: -45%
 }
 
 .section-image-left {
     width: 150%;
-    margin-top: 18%;
-    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     margin-left: -10%
 }
 

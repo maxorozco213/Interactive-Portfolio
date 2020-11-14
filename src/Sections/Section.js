@@ -3,6 +3,7 @@ import React, {useEffect, useRef} from "react";
 import SectionHeader from "../Components/Main/SectionHeader";
 import Education from "../Components/TextContent/Education";
 import Experience from "../Components/TextContent/Experience";
+import Boeing from "./Boeing";
 import Projects from "../Components/TextContent/Projects";
 // 3rd party components
 import {animated, useSpring} from "react-spring";
@@ -12,7 +13,7 @@ import "../Styles/Pages/Section.css";
 // Images
 import education from "../Images/interface.png";
 
-const calc = o => `translateY(${o * 0.03}px)`;
+const calc = o => `translateY(${o * 0.04}px)`;
 
 const Section = ({title, isLeftOrRight}) => {
     const ref = useRef();
@@ -30,7 +31,7 @@ const Section = ({title, isLeftOrRight}) => {
         return() => {
             window.removeEventListener("scroll", handleScroll);
         }
-    })
+    });
 
     // Determine current section and return the matching component - Contains the text
     function getTextContent() {
@@ -42,6 +43,8 @@ const Section = ({title, isLeftOrRight}) => {
                 return <Experience />
             case "Projects":
                 return <Projects />
+            case "Senior Design":
+                return <Boeing />
             default:
                 console.log("Error - Section.js Line 21")
         }
@@ -53,11 +56,7 @@ const Section = ({title, isLeftOrRight}) => {
         switch (title) {
             case "Education":
                 return (
-                    <animated.div
-                        style={{
-                            transform: offset.interpolate(calc)
-                        }}
-                    >
+                    <animated.div style={{transform: offset.interpolate(calc)}}>
                         <img
                             className={"section-image-right"}
                             src={education}
@@ -67,11 +66,7 @@ const Section = ({title, isLeftOrRight}) => {
                 );
             case "Experience":
                 return (
-                    <animated.div
-                        style={{
-                            transform: offset.interpolate(calc)
-                        }}
-                    >
+                    <animated.div style={{transform: offset.interpolate(calc)}}>
                         <img
                             className={"section-image-left"}
                             src={education}
@@ -79,22 +74,8 @@ const Section = ({title, isLeftOrRight}) => {
                         />
                     </animated.div>
                 );
-            case "Projects":
-                return (
-                    <animated.div
-                        style={{
-                            transform: offset.interpolate(calc)
-                        }}
-                    >
-                        {/*<img*/}
-                        {/*    className={"section-image-right"}*/}
-                        {/*    src={education}*/}
-                        {/*    alt={"Education"}*/}
-                        {/*/>*/}
-                    </animated.div>
-                );
             default:
-                console.log("Error - Section.js Line 35")
+                console.log("No image")
         }
     }
 
@@ -105,11 +86,11 @@ const Section = ({title, isLeftOrRight}) => {
     */
 
     if (isLeftOrRight % 2 === 0) {
-        // Left side7
+        // Left side
         return (
             <div
-                className={"section-container"}
                 ref={ref}
+                className={"section-container"}
             >
                 <SectionHeader
                     title={title}
